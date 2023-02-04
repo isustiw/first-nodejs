@@ -1,8 +1,13 @@
-const http = require("http");
+const Cirle = require("./circle");
+const circle = new Cirle();
 
-const server = http.createServer((req,res) => {
-    res.write("Hello NODEjs");
-    res.end();
-});
+console.log(circle.area(5));
 
-server.listen(3000);
+// const http = require("http");
+
+// const server = http.createServer((req,res) => {
+//     res.write("Hello NODEjs");
+//     res.end();
+// });
+
+// server.listen(3000);
