@@ -1,13 +1,13 @@
-const Cirle = require("./circle");
-const circle = new Cirle();
+const http = require("http");
+const PORT = 4000;
 
-console.log(circle.area(5));
+const server = http.createServer((req,res) => {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+    data: 'Hello World!',
+    })
+  );
+});
 
-// const http = require("http");
-
-// const server = http.createServer((req,res) => {
-//     res.write("Hello NODEjs");
-//     res.end();
-// });
-
-// server.listen(3000);
+console.log(`server is running at http://localhost:${PORT}`);
+server.listen(4000);
